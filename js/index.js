@@ -49,6 +49,7 @@ function createCards() {
   })
 
   magicBtn.addEventListener('click', () => {
+  // sorting array based on suit first; if the suit is the same sort based on value
     cards.sort((a, b) => (a.suit < b.suit) ? 1 : (a.suit === b.suit) ? ((a.value < b.value) ? 1 : -1) : -1 )
 
     cards.forEach((card, i) => {
@@ -84,8 +85,6 @@ function startGame() {
   createCards();
 
 }
-
-
 
 document.getElementById('start-game').addEventListener('click', startGame)
 
